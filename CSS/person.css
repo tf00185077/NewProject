@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+nav{
+  display:none;
+}
+div.loading_page{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100vw;
+  height:100vh;
+  background-color:rgba(0,0,0,1);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition:1s;
+  opacity: 1;
+  transform: scale(1);
+}
+div.loading_page > h1{
+  color:white;
+}
+div.loading_page >p{
+  color:white;
+}
+div.loading_page > div.loading_bar{
+  width:100vw;
+  height:40px;
+  background-color:white;
+  position:relative;
+  transition:.2s;
+}
+div.loading_page > div.loading_bar > div.loading_count{
+  position:absolute;
+  height:inherit;
+  top:0;
+  left:0;
+  background-color: #00B9FF;
+}

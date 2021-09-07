@@ -1,0 +1,655 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("../Pic/background.jpg");
+  background-position: center;
+  background-size: contain;
+  border-bottom: 5px solid gray;
+}
+
+div.header_container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.header_container div.header_left,
+div.header_container div.header_right {
+  /* border:1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+div.header_container div.header_left {
+  flex-direction: column;
+}
+
+div.header_container div.header_left>h1,
+div.header_container div.header_left>h1:after {
+  color: black;
+  padding: 20px;
+  font-size: 6rem;
+  margin: 0;
+  /* margin-top: 40px; */
+  position: relative;
+  /* width:60%; */
+  /* text-align: center; */
+  background-image: linear-gradient(80deg, rgba(186, 0, 202) 10%, rgba(0, 255, 238, 1) 10%, rgba(186, 0, 202) 30%, rgba(0, 255, 238, 1) 30%, rgba(186, 0, 202) 80%, rgba(0, 255, 238, 1) 80%);
+}
+
+div.header_container div.header_left>h1:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(60% 0 30% 6px);
+  --slice-2: inset(20% 5px 60% 0);
+  --slice-3: inset(40% 0 50% 5px);
+  --slice-4: inset(0 6px 90% 0);
+  --slice-5: inset(90% 6px 0% 6px);
+  content: "LifeBio";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-shadow: -5px -5px 0px red, 5px 5px 0 blue;
+  clip-path: var(--slice-0);
+}
+
+div.header_left>h1:hover {
+  cursor: pointer;
+}
+
+div.header_left>h1:hover::after {
+  animation: .5s glitch;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(10px, 0px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 5px);
+  }
+
+  20% {
+    clip-path: var(--slice-3);
+    transform: translate(-5px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, -5px);
+  }
+
+  40% {
+    clip-path: var(--slice-4);
+    transform: translate(10px, -10px);
+  }
+
+  50% {
+    clip-path: var(--slice-5);
+    transform: translate(-15px, 10px);
+  }
+
+  60% {
+    clip-path: var(--slice-2);
+    transform: translate(-20px, 0px);
+  }
+
+  70% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 8px);
+  }
+
+  80% {
+    clip-path: var(--slice-2);
+    transform: translate(-8px, -6px);
+  }
+
+  90% {
+    clip-path: var(--slice-3);
+    transform: translate(3px, 6px);
+  }
+
+  100% {}
+}
+
+div.header_container div.header_left>span {
+  display: inline-block;
+  width: 400px;
+  color: white;
+  margin-top: 50px;
+}
+
+div.header_left div.btn {
+  position: relative;
+  margin-top: 25px;
+}
+
+div.header_left div.btn button {
+  border: 0;
+  border-radius: 10px;
+  width: 80px;
+  height: 50px;
+  margin: 0 20px;
+}
+
+div.header_left div.btn button.btn_1,
+div.header_left div.btn button.btn_2 {
+  background: rgba(0, 255, 128, .5);
+  transition: .5s;
+}
+
+div.header_left div.btn button.btn_1:hover,
+div.header_left div.btn button.btn_2:hover {
+  background: rgba(255, 255, 255);
+  box-shadow: rgba(0, 255, 128, 1) 0 0 50px, inset rgba(0, 255, 128, 1) 0 0 100px;
+  cursor: pointer;
+}
+
+div.header_container div.header_right>img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(.5);
+}
+
+div.header_right {
+  justify-content: space-around;
+}
+
+div.header_right div {
+  /* border:1px solid black; */
+  width: 25%;
+  height: 500px;
+  background: rgba(255, 255, 255, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+div.header_right div a {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: white;
+  /* border: 1px solid red; */
+  width: 100%;
+  text-align: center;
+  transition: .3s;
+}
+
+div.header_right div a:hover {
+  box-shadow: inset 0px -10px 10px -10px #00FF22, inset 0px 10px 10px -10px #00FF22;
+}
+
+@media (min-width:1200px) {}
+
+@media (max-width:1199.98px) and (min-width:992px) {
+  header {
+    width: 100vw;
+  }
+
+  div.header_container {
+    width: 100vw;
+  }
+}
+
+@media (max-width:991.98px) and (min-width:768px) {
+  header {
+    width: 100vw;
+  }
+
+  div.header_container {
+    width: 100vw;
+  }
+}
+
+@media (max-width:767.98px) and (min-width:576px) {
+  header {
+    width: 100vw;
+  }
+
+  div.header_container {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  div.header_container div.header_right {
+    order: -1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  div.header_container div.header_right div {
+    width: 100%;
+    height: 100px;
+  }
+
+  div.header_container div.header_right>img {
+    display: none;
+  }
+
+  div.header_container div.header_left {
+    flex-direction: column;
+  }
+
+  div.header_container div.header_left>span {
+    width: 100%;
+  }
+
+  div.header_left div.btn button {
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width:575.98px) {
+  header {
+    width: 100vw;
+  }
+
+  div.header_container {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  div.header_container div.header_right {
+    order: -1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  div.header_container div.header_right div {
+    width: 100%;
+    height: 100px;
+  }
+
+  div.header_container div.header_right>img {
+    display: none;
+  }
+
+  div.header_container div.header_left {
+    flex-direction: column;
+  }
+
+  div.header_container div.header_left>span {
+    width: 100%;
+  }
+
+  div.header_left div.btn button {
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width:350px) {
+
+  div.header_container div.header_left>h1,
+  div.header_container div.header_left>h1:after {
+    font-size: 2rem;
+  }
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+  background-image: url("../Pic/background.jpg");
+  background-size: contain;
+  background-position: center;
+}
+
+main>h1 {
+  margin: 0;
+  padding: 5px;
+  color: white;
+  font-size: 4rem;
+  /* border-bottom:1px solid linear-gradient(90deg transparent,white); */
+  background-image: linear-gradient(90deg, transparent, white);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 5px;
+  text-align: right;
+}
+
+section.introduce {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.introduce div.introduce_left,
+section.introduce div.introduce_right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.introduce div.introduce_left div.circle {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  box-shadow: 0 0 40px #006FFF, 0 0 60px #006FFF;
+  overflow:hidden;
+}
+section.introduce div.introduce_left div.circle img{
+  width:100%;
+}
+div.introduce_right {
+  flex-direction: column;
+  position: relative;
+
+
+}
+
+div.introduce_right div {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin: 10px auto 10px;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+}
+
+div.introduce_right div p {
+  /* color: white; */
+  font-size: 24px;
+  text-align: center;
+}
+
+div.introduce_right div span {
+  /* border: 1px solid red; */
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+div.introduce_right div.text1 span.light {
+  background: rgba(0, 255, 238, 1);
+}
+
+div.introduce_right div.text1 span:hover {
+  box-shadow: 0 0 8px rgba(0, 255, 238, 1), 0 0 15px rgba(0, 255, 238, 1);
+  cursor: pointer;
+}
+
+div.introduce_right div.text2 span.light {
+  background: #4BFF00;
+}
+
+div.introduce_right div.text2 span:hover {
+  box-shadow: 0 0 8px #4BFF00, 0 0 15px #4BFF00;
+  cursor: pointer;
+}
+
+div.introduce_right div.text3 span.light {
+  background: #EDFF00;
+}
+
+div.introduce_right div.text3 span:hover {
+  box-shadow: 0 0 8px #EDFF00, 0 0 15px #EDFF00;
+  cursor: pointer;
+}
+
+div.introduce_right div.text1 {
+  background-image: linear-gradient(90deg, rgba(0, 255, 238, 1), rgba(0, 255, 238, 1));
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+div.introduce_right div.-bright {
+  background-size: 100% 100%;
+  box-shadow: 0 0 5px rgba(0, 255, 238, 1), 0 0 15px rgba(0, 255, 238, 1);
+}
+
+div.introduce_right div.text2 {
+  background-image: linear-gradient(90deg, rgba(75, 255, 0, 1), rgba(75, 255, 0, 1));
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+div.introduce_right div.text2.-bright {
+  background-size: 100% 100%;
+  box-shadow: 0 0 5px rgba(75, 255, 0, 1), 0 0 15px rgba(75, 255, 0, 1);
+}
+
+div.introduce_right div.text3 {
+  background-image: linear-gradient(90deg, rgba(237, 255, 0, 1), rgba(237, 255, 0, 1));
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+div.introduce_right div.text3.-bright {
+  background-size: 100% 100%;
+  box-shadow: 0 0 5px rgba(237, 255, 0, 1), 0 0 15px rgba(237, 255, 0, 1);
+}
+
+section.WHY>h1 {
+  /* display:block; */
+  width: 100%;
+  /* margin-top:20px; */
+  padding: 5px;
+  color: white;
+  font-size: 4rem;
+  /* border-bottom:1px solid linear-gradient(90deg transparent,white); */
+  background-image: linear-gradient(270deg, transparent, white);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 5px;
+  /* text-align:center; */
+}
+
+section.WHY {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-top: 3px solid gray;
+}
+
+section.WHY>img:nth-child(1) {
+  position: absolute;
+  width: 10%;
+  z-index: 0;
+  left: 10%;
+  top: 20%;
+}
+
+section.WHY>img:nth-child(2) {
+  position: absolute;
+  width: 10%;
+  z-index: 0;
+  left: 45%;
+  bottom: 0;
+}
+
+section.WHY div {
+  flex: 1;
+}
+
+section.WHY>div.Why_left {
+  align-self: center;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+section.WHY>div.Why_right {
+  text-align: center;
+  z-index: 1;
+}
+
+section.WHY>div.Why_right>img {
+  /* width:100%; */
+}
+
+@media (min-width:1200px) {}
+
+@media (max-width:1198.98px) and (min-width:992px) {
+  main {
+    width: 100vw;
+  }
+}
+
+@media (max-width:991.98px) and (min-width:768px) {
+  main {
+    width: 100vw;
+  }
+
+  div.introduce_right div span {
+    width: 20px;
+    height: 20px;
+    left: -20px;
+  }
+}
+
+@media (max-width:767.98px) and (min-width:576px) {
+  main {
+    width: 100vw;
+  }
+
+  div.introduce_right div span {
+    display: none;
+  }
+
+  section.introduce {
+    flex-direction: column;
+    color: white;
+  }
+}
+
+@media (max-width:575.98px) {
+  main {
+    width: 100vw;
+  }
+
+  div.introduce_right div span {
+    width: 10px;
+    height: 10px;
+    left: -10px;
+  }
+
+  div.introduce_right div span {
+    display: none;
+  }
+
+  section.introduce {
+    flex-direction: column;
+    color: white;
+  }
+
+  main h1,
+  section.WHY > h1 {
+    font-size: 2rem;
+  }
+  section.introduce div.introduce_left{
+    overflow: hidden;
+  }
+  section.introduce div.introduce_left div.circle{
+    width:100%;
+    /* padding-bottom:50%; */
+    height:100%;
+  }
+}
+@media (max-width:210px) {
+  main h1{
+    font-size:1rem
+  }
+}
+footer {
+  background-image: url("../Pic/background.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 1200px;
+  margin: 0 auto;
+  border-top: 3px solid gray;
+}
+
+footer div.connect {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+footer div.connect ul {
+  margin-right: 50px;
+  list-style: none;
+  padding:0;
+}
+
+footer ul li {
+  margin: 20px;
+}
+
+footer ul li a {
+  padding: 5px 10px;
+  color: white;
+}
+
+footer ul li a:hover {
+  color: #4BFF00;
+  box-shadow: 0 10px 10px -10px #4BFF00;
+}
+
+@media (min-width:1200px) {
+  footer{
+    width:1200px;
+  }
+}
+
+@media (max-width:1198.98px) and (min-width:992px) {
+  footer{
+    width:100vw;
+  }
+}
+
+@media (max-width:991.98px) and (min-width:768px) {
+  footer{
+    width:100vw;
+  }
+}
+
+@media (max-width:767.98px) and (min-width:576px) {
+  footer{
+    width:100vw;
+  }
+}
+
+@media (max-width:575.98px) {
+  footer{
+    width:100vw;
+  }
+}
