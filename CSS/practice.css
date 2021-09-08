@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 115, 115);
+  z-index: -1;
+}
+
+div.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background: rgba(255, 255, 255, .1);
+  z-index: -1;
+}
+
+header {
+  width: 90%;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header a.logo {
+  position: relative;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+ul.nav {
+  position: relative;
+  display: flex;
+  transition:1s;
+}
+
+ul.nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+ul.nav li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+ul.nav li a.check,
+ul.nav li a:hover {
+  background: white;
+  color: black;
+}
+
+div.content {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+div.content div.textbox {
+  max-width: 600px;
+}
+
+div.content div.textbox h1 {
+  font-size: 4rem;
+  color: white;
+  line-height: 1.5rem;
+}
+
+div.content div.textbox p {
+  color: white;
+}
+
+div.content div.textbox a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+div.imgbox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.imgbox img {
+  width: 100%;
+  min-width: 200px;
+  max-width: 600px;
+}
+
+ul.select {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+ul.select li {
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: .5s;
+  background: rgba(255, 255, 255, .3);
+  padding: 10px;
+  /* border:2px solid white; */
+}
+
+ul.select li.active {
+  border: 2px solid white;
+}
+
+ul.select li::after {
+  content: attr(data-text);
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  white-space: nowrap;
+  font-size: 8rem;
+  color: rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  font-weight: 900;
+}
+
+ul.select li.active::after {
+  opacity: 1;
+}
+
+ul.select li img {
+  max-width: 60px;
+}
+
+ul.sci {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul.sci li {
+  list-style: none;
+}
+
+ul.sci li a {
+  display: inline-block;
+  margin: 15px 0;
+}
+
+ul.sci li a img {
+  width: 30px;
+  max-width: 30px;
+}
+
+@media (max-width:940px) {
+  div.content {
+    flex-direction: column;
+  }
+
+  section {
+    padding-bottom: 200px;
+  }
+}
+
+@media (max-width:675px) {
+  div.content div.textbox h1 {
+    font-size: 2rem;
+  }
+
+  div.imgbox {
+    justify-content: center;
+  }
+
+  div.imgbox img {
+    max-width: 300px;
+  }
+
+  ul.select li::after {
+    font-size: 6rem;
+    top: -100px;
+    left: 50px;
+  }
+}
+
+@media (max-width:573px) {
+  section{
+    padding-bottom:250px;
+  }
+  ul.sci{
+    display:none;
+  }
+  div.bg::before{
+    display:none;
+  }
+  ul.nav {
+    display:none;
+  }
+  ul.select{
+    width:100%;
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+  ul.select li{
+    margin:10px;
+  }
+  .toggle{
+    display:relative;
+    width:30px;
+    height:30px;
+    background-image: url("../Pic/gear.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index:100
+  }
+  .toggle.active{
+    background-image:url("../Pic/atom.png");
+    z-index:100;
+  }
+  ul.select li::after{
+    content:"";
+  }
+  div.imgbox{
+    width:100%;
+  }
+  ul.nav.active{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(255,115,115);
+    transition: 1s;
+  }
+  ul.nav.active li{
+    margin:20px;
+  }
+  ul.nav.active li a{
+    font-size: 2rem;
+  }
+}
+@media (max-width:340px) {
+  ul.select li img{
+    max-width:40px;
+  }
+}

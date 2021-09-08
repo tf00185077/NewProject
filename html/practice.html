@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-HANT" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maxium-scale=2.0,user-scalable=yes">
+    <link rel="stylesheet" href="../CSS/practice.css">
+    <title>Practice</title>
+  </head>
+  <body>
+    <section>
+      <div class="bg"></div>
+      <header>
+        <a href="#" class="logo">Fruits</a>
+        <div class="toggle"></div>
+        <ul class="nav">
+          <li><a href="#" class="check">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's new</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textbox">
+          <h1>Fruits EveryDay</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero</p>
+          <a href="#">Read More...</a>
+        </div>
+        <div class="imgbox">
+          <img src="../Pic/apple.png" alt="" class="fruits">
+        </div>
+      </div>
+      <ul class="select">
+        <li data-text="Apple" class="active" onclick="changeimg('../Pic/apple.png','rgba(255,115,115)')"><img src="../Pic/apple.png"  ></li>
+        <li data-text="PineApple" onclick="changeimg('../Pic/pineapple.png','rgba(187,201,110,1)')"><img src="../Pic/pineapple.png" ></li>
+        <li data-text="DragonFruit" onclick="changeimg('../Pic/dragonfruit.png','rgba(255,99,234,1)')"><img src="../Pic/dragonfruit.png" ></li>
+        <li data-text="Apple" onclick="changeimg('../Pic/apple.png','rgba(255,115,115,1)')"><img src="../Pic/apple.png" ></li>
+        <li data-text="PineApple" onclick="changeimg('../Pic/pineapple.png','rgba(187,201,110,1)')"><img src="../Pic/pineapple.png" ></li>
+      </ul>
+      <ul class="sci">
+        <li><a href="#"><img src="../Pic/facebook.svg" alt=""></a></li>
+        <li><a href="#"><img src="../Pic/Instagram.svg" alt=""></a></li>
+        <li><a href="#"><img src="../Pic/facebook.svg" alt=""></a></li>
+      </ul>
+
+    </section>
+
+    <script src="../JS/practice.js"></script>
+  </body>
+</html>
