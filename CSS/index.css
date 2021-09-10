@@ -209,31 +209,31 @@ div.header_right div a:hover {
 
 @media (max-width:1199.98px) and (min-width:992px) {
   header {
-    width: 100vw;
+    width: 100%;
   }
 
   div.header_container {
-    width: 100vw;
+    width: 100%;
   }
 }
 
 @media (max-width:991.98px) and (min-width:768px) {
   header {
-    width: 100vw;
+    width: 100%;
   }
 
   div.header_container {
-    width: 100vw;
+    width: 100%;
   }
 }
 
 @media (max-width:767.98px) and (min-width:576px) {
   header {
-    width: 100vw;
+    width: 100%;
   }
 
   div.header_container {
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -260,7 +260,6 @@ div.header_right div a:hover {
   div.header_container div.header_left>span {
     width: 100%;
   }
-
   div.header_left div.btn button {
     margin: 10px 20px;
   }
@@ -268,11 +267,11 @@ div.header_right div a:hover {
 
 @media (max-width:575.98px) {
   header {
-    width: 100vw;
+    width: 100%;
   }
 
   div.header_container {
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -521,13 +520,13 @@ section.WHY>div.Why_right>img {
 
 @media (max-width:1198.98px) and (min-width:992px) {
   main {
-    width: 100vw;
+    width: 100%;
   }
 }
 
 @media (max-width:991.98px) and (min-width:768px) {
   main {
-    width: 100vw;
+    width: 100%;
   }
 
   div.introduce_right div span {
@@ -539,7 +538,7 @@ section.WHY>div.Why_right>img {
 
 @media (max-width:767.98px) and (min-width:576px) {
   main {
-    width: 100vw;
+    width: 100%;
   }
 
   div.introduce_right div span {
@@ -554,7 +553,7 @@ section.WHY>div.Why_right>img {
 
 @media (max-width:575.98px) {
   main {
-    width: 100vw;
+    width: 100%;
   }
 
   div.introduce_right div span {
@@ -632,24 +631,24 @@ footer ul li a:hover {
 
 @media (max-width:1198.98px) and (min-width:992px) {
   footer{
-    width:100vw;
+    width:100%;
   }
 }
 
 @media (max-width:991.98px) and (min-width:768px) {
   footer{
-    width:100vw;
+    width:100%;
   }
 }
 
 @media (max-width:767.98px) and (min-width:576px) {
   footer{
-    width:100vw;
+    width:100%;
   }
 }
 
 @media (max-width:575.98px) {
   footer{
-    width:100vw;
+    width:100%;
   }
 }

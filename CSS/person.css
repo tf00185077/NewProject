@@ -9,7 +9,7 @@ div.loading_page{
   position:absolute;
   left:0;
   top:0;
-  width:100vw;
+  width:100%;
   height:100vh;
   background-color:rgba(0,0,0,1);
   display:flex;
@@ -27,7 +27,7 @@ div.loading_page >p{
   color:white;
 }
 div.loading_page > div.loading_bar{
-  width:100vw;
+  width:100%;
   height:40px;
   background-color:white;
   position:relative;
