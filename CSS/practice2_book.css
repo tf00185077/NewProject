@@ -92,13 +92,14 @@ h1{
   background-color: #fff;
   position:relative;
   z-index:2;
-  width:80%;
-  line-height: 50px;
-  font-size: 3rem;
+  width:800px;
+  line-height: 90px;
+  font-size: 6rem;
   padding:0 10px;
 }
 div.text p{
-  width:400px;
+  width:600px;
+  font-size:24px;
   text-align: left;
   background: white;
   padding:10px;
@@ -110,6 +111,7 @@ div.text a{
   /* display:block; */
   text-align: center;
   width:60%;
+  font-size:24px;
 }
 div.text a:hover{
   background: yellow;
@@ -117,16 +119,29 @@ div.text a:hover{
 button.hamburger{
   display:none;
 }
+@media (max-width:1200px) {
+  div.text{
+    margin-left:200px;
+  }
+  h1{
+    width:600px;
+    font-size:4rem;
+  }
+}
 @media (max-width:821.98px) {
   div.text{
     margin-left:200px;
   }
   h1{
-    font-size: 2rem;
-    width:70%;
+    font-size: 3rem;
+    width:350px;
+    line-height:60px;
+  }
+  div.text p{
+    width:450px;
   }
 }
-@media (max-width:610.98px) {
+@media (max-width:655.98px) {
   nav{
     display:none;
   }
