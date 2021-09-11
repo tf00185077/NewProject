@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+  margin:0;
+  padding:0;
+  /* Google font 字體 */
+  font-family: 'Poppins', sans-serif;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.banner video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  object-fit: cover;
+}
+.banner h2{
+  position: absolute;
+  /* top:0; */
+  /* left:0; */
+  /* width: 100%; */
+  /* height: 100%; */
+  font-size: 100px;
+  text-align: center;
+  /* line-height:100vh; */
+  text-transform:uppercase;
+  background-color: red;
+  mix-blend-mode: screen;
+  z-index:1000;
+  /* color:transparent; */
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+    <div class="banner">
+      <video autoplay muted loop>
+        <source src="../Pic/try.mp4" type="video/mp4">
+      </video>
+      <h2>Hello</h2>
+    </div>
+  </div>
+
+  </body>
+</html>
