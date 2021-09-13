@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../Pic/book_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  margin: 0;
+  padding: 100px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+  z-index: 2;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav ul li{
+  margin:40px 0;
+} */
+nav ul li a {
+  display: block;
+  text-align: left;
+  border-bottom: 3px solid black;
+  color: white;
+  padding: 20px 20px;
+}
+nav ul li a.check{
+  background: white;
+  color: black;
+}
+nav ul li a:hover {
+  background: white;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  height: 100vh;
+  background-color: rgba(209, 143, 106, .7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5), 0 0 30px rgba(0, 0, 0, .5)
+}
+main div.book{
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  height: 100vh;
+}
+/* main div.book.openbook{
+  display:flex
+} */
+main div.box {
+  width: 350px;
+  position: relative;
+  margin: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  transition:.5s;
+  box-shadow: 0 0 10px black,0 0 10px black;
+}
+
+main div.box>div {
+  position: relative;
+}
+
+main div.box img {
+  max-width: 100%;
+}
+
+main div.box p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  background: rgba(170, 170, 170, .5);
+  margin: 0;
+}
+
+main div.box a {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 5px;
+  background: white;
+  line-height: 30px;
+  color: black;
+  text-align: center;
+}
+
+main div.box a:hover {
+  background: black;
+  color: white;
+}
+
+div.bookmark {
+  position: fixed;
+  width: 200px;
+  right: 0;
+  top: 30px;
+}
+
+div.bookmark div.content {
+  margin-bottom: 50px;
+  font-size: 20px;
+  margin-left: 50px;
+  padding: 20px 20px;
+  border-radius: 50px 0 0 50px;
+  transition: .5s;
+  transform: translateX(50px);
+}
+
+div.bookmark div.content:hover {
+  cursor: pointer;
+}
+
+div.bookmark div.content.finance {
+  background: rgba(209, 143, 106,.7);
+}
+
+div.bookmark div.content.novel {
+  background: rgba(153, 235, 170,.7);
+}
+
+div.bookmark div.content.inspire {
+  background: rgba(252, 208, 132,.7);
+}
+
+div.bookmark div.content.check {
+  transform: translateX(0px);
+}
+button.hamburger{
+  display:none;
+}
+div.arrow{
+  position:absolute;
+
+  z-index:3;
+  font-size:60px;
+  width:65px;
+  height:65px;
+  margin:0;
+  padding:0;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  text-align: center;
+  cursor: pointer;
+}
+div.arrow.right{
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+div.arrow.left{
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+div.arrow.up,
+div.arrow.down{
+  background: white;
+  display:none;
+  left:50%;
+  transform: translateX(-50%);
+}
+div.arrow.down{
+  bottom:0;
+}
+@media (max-width:1600.98px) {
+  main {
+    width: 800px;
+  }
+}
+
+@media (max-width:1200.98px) {
+  main {
+    width: 400px;
+  }
+}
+
+@media (max-width:800.98px) {
+  nav {
+    display: none;
+  }
+  nav.open{
+    display:block;
+    width:100%;
+    height:100vh;
+    backdrop-filter:blur(5px);
+    z-index:99;
+  }
+  button.hamburger{
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:100;
+    background: white;
+  }
+  section {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width:567.98px) {
+  div.bookmark div.content.check{
+    transform: rotate(270deg) translateY(50%);
+    color:white;
+  }
+  div.bookmark div.content {
+    display: inline-block;
+    margin-right: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0;
+    transform: rotate(270deg) translateY(50%);
+  }
+  div.bookmark div.content.novel{
+    top:150px;
+  }
+  div.bookmark div.content.inspire{
+    top:300px;
+  }
+  main div.book{
+    width:300px;
+    flex-wrap:nowrap;
+  }
+div.arrow.right,
+  div.arrow.left{
+    display:none;
+  }
+  main div.box{
+    width:250px;
+  }
+  div.arrow.up,
+  div.arrow.down{
+    display:inline-block;
+  }
+}
