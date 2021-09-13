@@ -79,6 +79,10 @@ nav ul li a:hover{
   background: white;
   color:black;
 }
+nav ul li a.check{
+  background: white;
+  color:black;
+}
 div.text{
   position:relative;
   text-align: left;
