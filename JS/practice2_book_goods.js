@@ -5,14 +5,22 @@ let financeMark =  document.getElementById("financeMark");
 let novelMark =  document.getElementById("novelMark");
 let inspireMark =  document.getElementById("inspireMark");
 let outbook =  document.getElementById("outbook");
+let count = 0;
+let count2 = 0;
 financeMark.addEventListener("click",function(){
   outbook.innerHTML = finance;
+  count = 0;
+  count2 = 0;
 })
 novelMark.addEventListener("click",function(){
   outbook.innerHTML = novel;
+  count = 0;
+  count2 = 0;
 })
 inspireMark.addEventListener("click",function(){
   outbook.innerHTML = inspire;
+  count = 0;
+  count2 = 0;
 })
 $("div.content").click(function(e) {
   $("div.content").removeClass("check");
@@ -24,7 +32,7 @@ $("button.hamburger").click(function() {
   $("nav").toggleClass("open");
 })
 
-let count = 0;
+
 $("div.arrow.right").click(function() {
   if ($("div.box:last-child").position().left>10) {
     count -= 70;
@@ -38,7 +46,7 @@ $("div.arrow.left").click(function() {
   }
 
 })
-let count2 = 0;
+
 $("div.arrow.down").click(function() {
   if ($("div.box:last-child").position().top > 50) {
     count2 -= 70;
@@ -53,5 +61,7 @@ $("div.arrow.up").click(function() {
   }
 })
 $(window).resize(function(){
-  $("div.box").css("transform","translate(0)")
+  $("div.box").css("transform","translate(0)");
+  count = 0;
+  count2 = 0;
 })
