@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../Pic/message_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  margin: 0;
+  padding: 100px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+  z-index: 2;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  text-align: left;
+  border-bottom: 3px solid black;
+  color: white;
+  padding: 20px 20px;
+}
+
+nav ul li a.check {
+  background: white;
+  color: black;
+}
+
+nav ul li a:hover {
+  background: white;
+  color: black;
+}
+
+button.hamburger {
+  display: none;
+}
+
+a.log_in {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: black;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 30px;
+  z-index: 2;
+  transition: .5s;
+}
+
+a.log_in:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, .5);
+  color: white;
+}
+
+@media (max-width:800.98px) {
+  nav {
+    display: none;
+  }
+
+  nav.open {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    z-index: 99;
+  }
+
+  button.hamburger {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    background: white;
+  }
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.card {
+  width: 500px;
+  height: 700px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  position: relative;
+  transition: 1s;
+  box-shadow: 50px 0 30px -30px rgba(0, 0, 0, .6), 0 50px 30px -30px rgba(0, 0, 0, .6);
+}
+
+div.imgbox {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 1s;
+  box-shadow: 50px 0 30px -30px rgba(0, 0, 0, .6), 0 50px 30px -30px rgba(0, 0, 0, .6);
+}
+
+div.card:hover {
+  transform: translateZ(50px) translateX(50%);
+}
+
+div.card:hover div.imgbox {
+  transform: rotateY(-180deg);
+}
+
+div.card div.imgbox>img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+div.card div.imgbox h1 {
+  padding: 10px 50px;
+}
+
+div.card div.imgbox>img:nth-child(2),
+div.card div.imgbox h1 {
+  transform: rotateY(180deg);
+}
+
+div.card div.message {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 50px 0px 70px -20px rgba(0, 0, 0, .3);
+}
+
+div.message img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+div.card div.message form.writemessage {
+  /* border:1px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+input#name {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+textarea#text {
+  margin-bottom: 30px;
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  background: white;
+  color: black;
+  line-height: 30px;
+}
+
+button[type="submit"]:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+div.social_link {
+  width: 100%;
+  margin-top: 30px;
+}
+
+div.social_link ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+div.social_link ul li {
+  margin: 0 20px;
+}
+
+div.social_link ul li a {
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background: black;
+}
+
+div.social_link ul li a:hover {
+  color: black;
+  background: white;
+}
+
+section>h1 {
+  position: absolute;
+  font-size: 5rem;
+  right: 0;
+  bottom: 0;
+  z-index: 1
+}
+
+section>h1>span {
+  color: white;
+}
+
+@media (max-width:1400.98px) {
+  div.card:hover {
+    transform: translateZ(50px) translateX(80%);
+  }
+}
+
+@media (max-width:1300.98px) {
+  div.card {
+    width: 300px;
+    height: 420px;
+    /* margin-left:500px; */
+  }
+
+  div.social_link {
+    margin-top: 0px;
+  }
+
+  div.social_link ul li {
+    margin: 0 10px;
+  }
+
+  div.social_link ul li a {
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width:800.98px) {
+  div.card {
+    margin-left: 0;
+  }
+
+  div.card:hover div.imgbox {
+    transform: rotateY(-359deg);
+  }
+
+  div.card:hover {
+    transform: translateZ(50px) translateX(0);
+  }
+
+  section>h1 {
+    font-size: 4rem
+  }
+}
+div.login_page{
+  position:absolute;
+  width:100%;
+  height:100vh;
+  background: rgba(255,255,255,.1);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+div.login_page form{
+  border-top:1px solid rgba(255,255,255,.3);
+  border-left:1px solid rgba(255,255,255,.3);
+  width:350px;
+  height:500px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:50px;
+  position:relative;
+  border-radius: 7px;
+  box-shadow: 0px 0 20px rgba(0,0,0,.6)
+}
+div.login_page form label,
+div.login_page form input{
+  width:100%;
+  font-size: 24px;
+  color:white;
+  letter-spacing: 2px;
+}
+div.login_page form input{
+  color:black;
+}
+div.login_page form input{
+  margin-bottom:50px;
+}
+div.login_page form button{
+  margin-bottom:20px;
+}
+div.login_page_close{
+  position:absolute;
+  right:10px;
+  top:10px;
+  width:40px;
+  height:40px;
+  /* border:1px solid red; */
+  cursor: pointer;
+}
+div.login_page_close span{
+  display:inline-block;
+  width: 100%;
+  height:5px;
+  background:white;
+  position:absolute;
+  top:18px;
+}
+div.login_page_close span.line1{
+  transform: rotate(45deg)
+}
+div.login_page_close span.line2{
+  transform: rotate(-45deg)
+}

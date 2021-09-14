@@ -1,8 +1,8 @@
-$("button").click(function(){
-  $("button").toggleClass("is-active");
+$("div.login_page").hide();
+$("button.hamburger").click(function() {
+  $("button.hamburger").toggleClass("is-active");
   $("nav").toggleClass("open");
 })
-$("div.login_page").hide();
 $("div.login_page_close").click(function(){
   $("div.login_page").hide();
 })
