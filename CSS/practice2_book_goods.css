@@ -177,15 +177,19 @@ div.arrow{
   position:absolute;
 
   z-index:3;
-  font-size:60px;
-  width:65px;
-  height:65px;
+  font-size:53px;
+  line-height:1;
   margin:0;
   padding:0;
   border-radius: 50%;
-  /* box-shadow: 0 0 5px rgba(0,0,0,.5); */
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
   text-align: center;
   cursor: pointer;
+  background: white;
+}
+div.arrow i{
+  display:block;
+  line-height:1;
 }
 div.arrow.right{
   right:0;
