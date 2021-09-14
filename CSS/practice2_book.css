@@ -169,6 +169,15 @@ button.hamburger{
     z-index:4;
   }
 }
+@media (max-width:450px) {
+  h1{
+    font-size: 2rem;
+    width:100%;
+  }
+  div.text p{
+    width:100%;
+  }
+}
 div.login_page{
   position:absolute;
   width:100%;
