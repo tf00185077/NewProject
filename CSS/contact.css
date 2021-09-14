@@ -94,3 +94,27 @@ button{
 .error{
   border:2px solid red;
 }
+@media (max-width:1200.98px) {
+  nav{
+    width:100%;
+  }
+  main{
+    width:100%;
+  }
+}
+@media (max-width:705.98px) {
+  nav>ul>li>a{
+    font-size: 18px;
+  }
+  nav>ul>li>a>img{
+    min-width:30px;
+  }
+}
+@media (max-width:600.98px) {
+  .card{
+    width:300px;
+  }
+  textarea{
+    width:100%;
+  }
+}

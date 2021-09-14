@@ -183,7 +183,7 @@ div.arrow{
   margin:0;
   padding:0;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  /* box-shadow: 0 0 5px rgba(0,0,0,.5); */
   text-align: center;
   cursor: pointer;
 }
@@ -199,13 +199,17 @@ div.arrow.left{
 }
 div.arrow.up,
 div.arrow.down{
-  background: white;
+  /* background: white; */
   display:none;
   left:50%;
   transform: translateX(-50%);
+  color:green;
+}
+div.arrow.up{
+  top:30px;
 }
 div.arrow.down{
-  bottom:0;
+  bottom:20px;
 }
 @media (max-width:1600.98px) {
   main {
