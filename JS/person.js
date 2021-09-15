@@ -26,7 +26,7 @@ var scale2=1;
 document.addEventListener("wheel",function(e){
   // console.log(e.deltaX);
   // console.log(e.deltaY);
-  this.preventDefault();
+  
   let nav = document.getElementById("nav");
   if(scale > 3){
 nav.innerHTML="";
@@ -41,4 +41,25 @@ nav.innerHTML="";
     };
   }
 
+})
+var start = 1;
+function test(){
+
+}
+$("#bar").on("mousedown",function(){
+  $(this).on("mousemove",function(e){
+    console.log($("#mouse").position());
+    console.log($("#mouse").offset());
+    console.log(e.clientY);
+    console.log(e.pageY);
+    console.log($("#mouse_bar").offset().top)
+    console.log(((e.clientY - $("#mouse_bar").offset().top)/parseInt($("#mouse_bar").css("height"))).toFixed(2)*100);
+    $("#mouse").css("top",((e.clientY - $("#mouse_bar").offset().top)/parseInt($("#mouse_bar").css("height"))).toFixed(2)*100 + "%")
+  })
+
+
+
+})
+$("#bar").on("mouseup",function(){
+  $(this).off("mousemove")
 })
