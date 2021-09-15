@@ -44,7 +44,7 @@ div.loading_page > div.loading_bar > div.loading_count{
 div.test_mouse{
   width:2px;
   height:500px;
-  border:1px solid red;
+
   margin:0 auto;
   position:relative;
   margin-top:100px;
@@ -69,4 +69,34 @@ div.test_mouse>div#bar{
   transform: translateX(50%);
   /* border:1px solid black; */
   z-index:2;
+}
+div.test_mouse>div.number{
+  position:absolute;
+  border:1px solid red;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  line-height: 0;
+}
+div.test_mouse>div.number>p{
+  display:inline-block;
+  margin:0;
+  padding:0 50px;
+}
+div.test_mouse>div.number>p:nth-child(1){
+  position:absolute;
+  top:0%;
+  transform:translateY(-100%)
+
+}
+div.test_mouse>div.number>p:nth-child(2){
+  position:absolute;
+  top:50%;
+  transform:translateY(-100%);
+}
+div.test_mouse>div.number>p:nth-child(3){
+  position:absolute;
+  top:100%;
+  transform:translateY(-100%)
 }

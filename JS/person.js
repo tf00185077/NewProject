@@ -26,10 +26,10 @@ var scale2=1;
 document.addEventListener("wheel",function(e){
   // console.log(e.deltaX);
   // console.log(e.deltaY);
-  
+
   let nav = document.getElementById("nav");
   if(scale > 3){
-nav.innerHTML="";
+    nav.innerHTML="";
     return;
   }else{
     if(e.deltaY > 0){
@@ -38,6 +38,9 @@ nav.innerHTML="";
       nav.style.opacity = scale2 =scale2-0.05;
       console.log(scale2);
       console.log(scale);
+    }else{
+      nav.style.transform=`scale(${scale=scale-0.1})`;
+      nav.style.opacity = scale2 =scale2+0.05;
     };
   }
 
